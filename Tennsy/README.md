@@ -12,13 +12,13 @@ sudo cp 49-teensy.rules /etc/udev/rules.d/
 
 
 #### 二、编译已有的工程
-第一次编译可能需要久等一下，它需要安装相关平台的环境
-> $ cd ~/catkin_ws/src/rikirobot/arduino  
+第一次编译可能需要久等一下，它需要安装相关平台的环境，这里以两驱动的为示例，请将两驱的源代码放入到ubuntu环境中。
+> $ cd rikirobot_2wdarduino  
 $ platformio run
 
 #### 三、烧写固件到硬件里面
 注意teensy 烧写会要求按一下板上的那个小按钮，编译出现“hint: press the reset button”，在按按键
-> $ cd ~/catkin_ws/src/rikirobot/arduino  
+> $ cd rikirobot_2wdarduino  
 $ platformio run --target upload  
 此命令会编译上传相关固件
 
