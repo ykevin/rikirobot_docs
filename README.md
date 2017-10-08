@@ -1,4 +1,5 @@
 ### RikiRobot实物  淘宝上可搜(RikiRobot)
+![image](./image/rikirobot.jgp)
 
 ### RikiRobot硬件配置
 
