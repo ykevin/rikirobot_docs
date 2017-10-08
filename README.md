@@ -1,5 +1,5 @@
 ##Rikirobot Docs
 
 * Rikirobot User Manual
-* Rikirobot Stm32 User Manual
-* Rikirobot Tennsy User Manual
+* Rikirobot Stm32 Dev Board User Manual
+* Rikirobot Tennsy Dev Board User Manual
