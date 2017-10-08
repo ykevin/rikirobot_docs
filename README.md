@@ -65,14 +65,14 @@ ROS系统    | 树莓派为 kinetic
 
 * 4.4、加载pid图形配置文件 Perspective > Import 选择 ~/catkin_ws/src/riki_pid/riki_pid.perspective
 
-![image](E:\Material\Markdown\rikipid.png)
+![image](./image/rikipid.png)
 
 * 4.5、通过上面调试用户得到最合适的PID值后，用户可以从我给的云盘资料下载rikirobot_2wdarduino.zip文件（四驱动与stm32请对应相关的文件目录），将此文件放入到ubuntu的虚拟机里面，然后打开 rikirobot_2wdarduino/lib/config/config.h文件更改相关的PID参数，然后编译烧写到控制板上，烧写前请将USB插入虚拟机上，并连接上，进入到rikirobot_2wdarduino目录然后执行下面命令，对于stm32的用户请参考stm32烧写指导。
 > $ platformio run --target upload
 
 ### 五、里程信息
 * 5.1、里程信用用于估计机器人相对于原点的位置，为了达到好的精度，Riki Robot使用了两个里程源，机器人的线速度是根据电机上的编码器来计算的，并将计算的结果发布到/raw_vel结点上，而机器人的角速度则通过陀螺仪来控制，通过AHRS算法通过imu_filter_madgwick包过滤掉来自IMU的噪声，滤波后的输出发布到/imu/data，为需要机器人结点可靠的IMU数据，下面是/raw_imu中的数据发布到/imu/data/上
-![image](E:\Material\Markdown\imu.png)
+![image](./image/imu.png)
 
 * 5.2、在Robot端运行下面命令
 > $ roslaunch rikirobot  bringup.launch
@@ -86,11 +86,11 @@ ROS系统    | 树莓派为 kinetic
 然后打开 File > Open Config 然后选择 ~/catkin_ws/src/rikirobot_project/rikirobot/rviz/odometry.rviz.
 
 * 5.5、旋转角度测试校准，按键盘的旋转键，旋转360度后，看rviz上的转动是不是也是360度，如下图：
-![image](E:\Material\Markdown\rotary.png)
+![image](./image/rotary.png)
 
 * 5.6、路径测试，用键盘控制小车，进行移动，观查相关路径结果是否与实际一致，如下图测试,测试结果大致能闭合就行，要更精确的结果，后面会有AMCL、Move_base等算法包进行约束：
 
-![image](E:\Material\Markdown\rikisquare.png)
+![image](./image/rikisquare.png)
 
 ### 六、创建地图
 创建地图，这里提供3种创建地图的方式，第一种是键盘创建地图，第二种是鼠标创建地图，第三种是通过选定区域自动创建地图。
@@ -107,7 +107,7 @@ $ roslanuch rikirobot lidar_slam.launch
 然后打开 File > Open Config 然后选择 ~/catkin_ws/src/rikirobot_project/rikirobot/rviz/slam.rviz.
 
 然后用键盘控制小车，得到下面的显示，则是正常
-![image](E:\Material\Markdown\slam.png)
+![image](./image/slam.png)
 
 * 6.4、控制小车行走到你认为地图创建好为止，然后在Robot端保存地图，运行下面命令，用户请注意，一定要按我下面的方法来保存地图，用户不能随意的更改地图路径与名称，对于将来对ROS熟悉后，用户就可以按自己的方式来保存地图。
 > $rosrun map_server map_saver -f ~/catkin_ws/src/rikirobot_project/rikirobot/maps/house
@@ -130,7 +130,7 @@ $./map.sh
 > $cd ~/catkin_ws/src/rikirobot_project/rikirobot/maps  
 $ls -a house.pgm house.yaml
 
-![image](E:\Material\Markdown\map.png)
+![image](./image/map.png)
 
 ### 七、自动导航
 * 7.1、在Robot端打开两个终端运行
