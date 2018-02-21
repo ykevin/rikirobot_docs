@@ -1,6 +1,6 @@
 ## 淘宝请搜索: ROS STM32 电机驱动板 
 ## 店铺搜：风野萧萧 
-![image](./image/stm32mark.jpg)
+![image](./image/stm32mark.png)
 
 #### 关于stm32下的ROS开发环境介绍说明，此开发环境是在Linux下使用stm32的标准库“STM32F10x_StdPeriph_Driver3.5”，进行stm32开发，整体开发框架已搭建完成，用户开发简单，只需要按自己的方式开发代码即可，它集成了ros_lib，让开发ros底层像arduino一样操作，让广大机友从写stm32解析器结点中解放出来，整体的代码风格如下：  
 ![image](./image/code1.png)
